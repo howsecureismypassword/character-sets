@@ -5,7 +5,7 @@
     "ASCII Top Row Symbols": ["[-!@£#$%^&*()=+_]", 15],
     "ASCII Other Symbols": ["[\\s\\?\\/\\.>,<`~\\|;:\\]}\\[{'\"\\\\]", 19],
 
-    "Unicode Latin 1 Supplement": ["[\\u00A1-\\u00FF]", 94],
+    "Unicode Latin 1 Supplement": ["[\\u00A1-\\u00A2\\u00A4-\\u00FF]", 93],
     "Unicode Latin Extended A": ["[\\u0100-\\u017F]", 128],
     "Unicode Latin Extended B": ["[\\u0180-\\u024F]", 208],
     "Unicode Latin Extended C": ["[\\u2C60-\\u2C7F]", 32],
