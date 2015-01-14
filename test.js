@@ -103,6 +103,19 @@ buster.testCase("named-number", {
     },
 
     "Other Cases": {
+        // "n", "0", "f", and space were causing issues
+        "n": function () {
+            assert.equals(characterSets("n").getSets(), ["ASCII Lowercase"]);
+        },
+
+        "0": function () {
+            assert.equals(characterSets("0").getSets(), ["ASCII Numbers"]);
+        },
+
+        "f": function () {
+            assert.equals(characterSets("f").getSets(), ["ASCII Lowercase"]);
+        },
+
         "space": function () {
             assert.equals(characterSets(" ").getSets(), ["ASCII Other Symbols"]);
         },
@@ -112,7 +125,7 @@ buster.testCase("named-number", {
             assert.equals(characterSets("£").getSets(), ["ASCII Top Row Symbols"]);
         },
 
-        // Check for double character set characters
+        // Check for that no character appears in multiple character sets
         "doubles": function () {
             var keepGoing = true,
                 character,
