@@ -1,8 +1,6 @@
 # How Secure Is My Password
 ## Character Sets
 
-### Usage
-
 ```javascript
 var characterSets = require("character-sets");
 
