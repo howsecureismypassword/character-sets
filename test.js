@@ -10,6 +10,7 @@ var assert = buster.referee.assert;
  * Setup
  */
 var characterSets = require("./character-sets");
+characterSets.setCharacterSets(require("./character-sets.json"));
 
 /**
  * Tests

@@ -2,7 +2,7 @@
 
 var L = require("hsimp-library");
 
-var characterSetsDictionary = require("./character-sets-dictionary");
+var characterSetsDictionary = {};
 
 var getRegex = L.prop(0);
 var getValue = L.prop(1);
@@ -32,6 +32,10 @@ var characterSet = function (string) {
     };
 
     return self;
+};
+
+characterSet.setCharacterSets = function (dic) {
+    characterSetsDictionary = dic;
 };
 
 module.exports = characterSet;
