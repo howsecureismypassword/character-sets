@@ -53,6 +53,9 @@ buster.testCase("named-number", {
         "Unicode Cyrillic Lowercase": function () {
             assert.equals(characterSets("я").getSets(), ["Unicode Cyrillic Lowercase"]);
         },
+        "Unspecified Unicode": function () {
+            assert.equals(characterSets("ࢦ").getSets(), ["Unspecified Unicode"]);
+        },
     },
 
     "Possible Characters": {
@@ -96,10 +99,13 @@ buster.testCase("named-number", {
 
     "Combinations": {
         "Character Sets": function () {
-            assert.equals(characterSets("aBc!3").getSets(), ["ASCII Lowercase", "ASCII Uppercase", "ASCII Numbers", "ASCII Top Row Symbols"]);
+            assert.equals(characterSets("aBc!3ࢦ").getSets(), ["ASCII Lowercase", "ASCII Uppercase", "ASCII Numbers", "ASCII Top Row Symbols", "Unspecified Unicode"]);
         },
         "Possible Characters": function () {
             assert.equals(characterSets("aBc!3").getPossibleCharacters(), 77);
+        },
+        "Possible Characters with Unspecified": function () {
+            assert.equals(characterSets("aBc!3ࢦ").getPossibleCharacters(), 1077);
         }
     },
 
