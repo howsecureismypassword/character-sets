@@ -1,0 +1,21 @@
+{
+  "name": "hsimp-character-sets",
+  "version": "0.2.0",
+  "description": "Checks if a string contains specified character sets",
+  "main": "character-sets.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "author": "Small Hadron Collider",
+  "license": "MIT",
+  "repository" : {
+    "type" : "git",
+    "url" : "http://github.com/howsecureismypassword/character-sets.git"
+  },
+  "dependencies": {
+    "hsimp-library": "0.1.*"
+  },
+  "devDependencies": {
+    "buster": "0.7.*"
+  }
+}
